@@ -115,8 +115,6 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Image;
-//import java.awt.Image;
-//import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -129,7 +127,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-import javax.swing.border.EmptyBorder;
 
 public class Okno extends JFrame {
 
@@ -142,10 +139,7 @@ public class Okno extends JFrame {
 	private MapCanvas canvas;
 	private JLabel nadpis;
 
-
 	private MapaSveta mapaSveta;
-
-	
 
 	public String lokace(String nazev) {
 		switch (nazev) {
@@ -203,7 +197,6 @@ public class Okno extends JFrame {
 			System.out.println("Chybi mapa");
 		}
 
-		
 		try {
 			String poloha = mapaSveta.nazevAktualniPolohy().toLowerCase();
 			imgLokalita = ImageIO.read(new File(imgLokalitaFilename + poloha + ".jpg"));
